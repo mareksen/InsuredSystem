@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insured Detail - Insurance System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Style for each editable field container */
+        .editable-field {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 0;
+        }
+
+        /* Style for the span inside editable fields */
+        .editable-field span {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+
+        .edit-mode {
+            display: none;
+        }
+
+        .edit-mode-active .edit-mode {
+            display: inline;
+        }
+
+        .edit-mode-active .view-mode {
+            display: none;
+        }
+
+        /* Style for highlighting elements, typically when they are editable or focused */
+        .highlight {
+        background-color: #e7f4ff; /* soft blue color */
+        transition: background-color 0.3s ease; /* smooth color change animation */
+    }
+    </style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="home.html">Insurance System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="list_of_insured.html">List of Insured</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="list_of_policies.html">List of Insurance Policies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="add_insured.html">Add Insured</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Insured detail content -->
+<div class="container mt-4">
+    <h1>Insured Detail</h1>
+    <div id="insuredDetails" class="card">
+        <!-- Added id="insuredDetails" -->
+        <div class="card-body">
+            <!-- Name and surname will now be editable -->
+            <div class="editable-field">
+                <strong>Name:</strong>
+                <span id="firstName-text" contenteditable="false"><!-- Name will be inserted here --></span>
+                <span id="lastName-text" contenteditable="false"><!-- Surname will be inserted here --></span>
+            </div>
+            <!-- Other editable fields will be here -->
+        </div>
+        <div class="card-footer">
+            <button id="save-all" class="btn btn-success" onclick="saveAllData()" style="display: none;">Save All
+            </button>
+            <button id="edit-all" class="btn btn-primary" onclick="toggleAllEdit()">Edit All</button>
+            <button id="delete-insured" class="btn btn-danger" onclick="deleteInsured()">Delete Insured Person</button>
+            <button onclick="location.href='create_insurance_policy.html'" class="btn btn-info">Create Insurance
+                Policy
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap scripts -->
+<script>
+    // Function to create HTML structure with an editable field
+    function createEditableField(fieldId, fieldName, fieldValue) {
+        return `
+            <div class="editable-field">
+                <strong>${fieldName}:</strong>
+                <span id="${fieldId}-text" contenteditable="false">${fieldValue}</span>
+            </div>
+        `;
+    }
+
+    // Function to toggle all fields into edit mode
+    function toggleAllEdit() {
+        document.querySelectorAll('.editable-field span').forEach(field => {
+            field.contentEditable = true;
+        });
+        document.getElementById('edit-all').style.display = 'none';
+        document.getElementById('save-all').style.display = 'inline';
+    }
+
+    // Function to save all data
+    function saveAllData() {
+        const queryParams = new URLSearchParams(window.location.search);
+        const insuredId = queryParams.get('insuredId');
+        const url = `http://localhost:8080/api/insured/${insuredId}`;
+
+        let dataToUpdate = {};
+        document.querySelectorAll('.editable-field span').forEach(field => {
+            const fieldId = field.id.replace('-text', '');
+            dataToUpdate[fieldId] = field.innerText;
+            field.contentEditable = false;
+        });
+
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dataToUpdate),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Success:', data);
+            // Possible user feedback can be added here
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            // Error handling can be implemented here
+        });
+
+        document.getElementById('edit-all').style.display = 'inline';
+        document.getElementById('save-all').style.display = 'none';
+    }
+
+    // Function to load insured person's details
+    function loadInsuredDetail() {
+        const queryParams = new URLSearchParams(window.location.search);
+        const insuredId = queryParams.get('insuredId');
+
+        if (insuredId) {
+            fetch(`http://localhost:8080/api/insured/${insuredId}`)
+                .then(response => response.json())
+                .then(insured => {
+                    const insuredDetailsElement = document.getElementById('insuredDetails').querySelector('.card-body');
+                    insuredDetailsElement.innerHTML = `
+                        ${createEditableField('firstName', 'First Name', insured.firstName)}
+                        ${createEditableField('lastName', 'Last Name', insured.lastName)}
+                        ${createEditableField('email', 'E-mail Address', insured.email)}
+                        ${createEditableField('phone', 'Phone Number', insured.phone)}
+                        ${createEditableField('residence', 'Residence', insured.residence)}
+                        ${createEditableField('placeOfBirth', 'Place of Birth', insured.placeOfBirth)}
+                        ${createEditableField('dateOfBirth', 'Date of Birth', insured.dateOfBirth)}
+                        ${createEditableField('socialSecurityNumber', 'Social Security Number', insured.socialSecurityNumber)}
+                        ${createEditableField('maritalStatus', 'Marital Status', insured.maritalStatus)}
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('insuredDetails').innerHTML = `<div class="alert alert-danger" role="alert">Unable to load insured details.</div>`;
+                });
+        } else {
+            document.getElementById('insuredDetails').innerHTML = `<div class="alert alert-warning" role="alert">No insured ID provided in the URL.</div>`;
+        }
+    }
+
+    // Function to delete an insured person
+    function deleteInsured() {
+        const queryParams = new URLSearchParams(window.location.search);
+        const insuredId = queryParams.get('insuredId');
+
+        if (!insuredId) {
+            alert('No insured ID provided.');
+            return;
+        }
+
+        if (confirm('Are you sure you want to delete this insured person?')) {
+            fetch(`http://localhost:8080/api/insured/${insuredId}`, {
+                method: 'DELETE'
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Insured person deleted successfully.');
+                    window.location.href = 'list_of_insured.html'; // Adjust according to URL structure
+                } else {
+                    response.text().then(text => { throw new Error(text) });
+                }
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+                alert('Failed to delete the insured person. Error: ' + error.message);
+            });
+        }
+    }
+
+    // Load insured person's details when the window is loaded
+    window.onload = loadInsuredDetail;
+
+</script>
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+

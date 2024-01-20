@@ -1,0 +1,330 @@
+2024-01-11 18:55:40.604  INFO 42554 --- [main] cz.itnetwork.InsuredSystem               : Starting InsuredSystem using Java 17.0.8.1 on MacBook-MacBook-Pro.local with PID 42554 (/Users/macbook/Dropbox/IntelliJprojects/InsuredSystem/target/classes started by macbook in /Users/macbook/Dropbox/IntelliJprojects/InsuredSystem)
+2024-01-11 18:55:40.610  INFO 42554 --- [main] cz.itnetwork.InsuredSystem               : No active profile set, falling back to default profiles: default
+2024-01-11 18:55:41.371  INFO 42554 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-11 18:55:41.427  INFO 42554 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2024-01-11 18:55:42.015  INFO 42554 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-11 18:55:42.026  INFO 42554 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-11 18:55:42.026  INFO 42554 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2024-01-11 18:55:42.100  INFO 42554 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-11 18:55:42.101  INFO 42554 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1441 ms
+2024-01-11 18:55:42.245  INFO 42554 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-11 18:55:42.334  INFO 42554 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-11 18:55:42.518  INFO 42554 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-11 18:55:42.623  INFO 42554 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-11 18:55:42.786  INFO 42554 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-11 18:55:42.807  INFO 42554 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-01-11 18:55:43.429  INFO 42554 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-11 18:55:43.442  INFO 42554 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-11 18:55:43.742  WARN 42554 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-11 18:55:43.859 DEBUG 42554 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-11 18:55:43.925 DEBUG 42554 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2024-01-11 18:55:43.966 DEBUG 42554 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-01-11 18:55:43.977 DEBUG 42554 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-11 18:55:44.066  INFO 42554 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-11 18:55:44.074  INFO 42554 --- [main] cz.itnetwork.InsuredSystem               : Started InsuredSystem in 4.04 seconds (JVM running for 4.544)
+2024-01-11 18:55:54.061  INFO 42554 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-11 18:55:54.061  INFO 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-11 18:55:54.061 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-01-11 18:55:54.061 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-01-11 18:55:54.061 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-01-11 18:55:54.062 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@37dec463
+2024-01-11 18:55:54.062 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4fef5792
+2024-01-11 18:55:54.062 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-01-11 18:55:54.063  INFO 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-11 18:55:54.073 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 18:55:54.076 DEBUG 42554 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 18:55:54.209 DEBUG 42554 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 18:55:54.250 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:55:54.258 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 18:55:54.317 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:55:54.724 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/policies", parameters={}
+2024-01-11 18:55:54.747 DEBUG 42554 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.PolicyController#getAllPolicies()
+2024-01-11 18:55:54.752 DEBUG 42554 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select policy0_.id as id1_1_, policy0_.coverage_amount as coverage2_1_, policy0_.insured_id as insured_7_1_, policy0_.monthly_amount as monthly_3_1_, policy0_.policy_end_date as policy_e4_1_, policy0_.policy_start_date as policy_s5_1_, policy0_.policy_type as policy_t6_1_ from policies policy0_
+2024-01-11 18:55:54.754 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:55:54.754 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2024-01-11 18:55:54.756 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:55:54.825 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/policies", parameters={}
+2024-01-11 18:55:54.826 DEBUG 42554 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.PolicyController#getAllPolicies()
+2024-01-11 18:55:54.828 DEBUG 42554 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select policy0_.id as id1_1_, policy0_.coverage_amount as coverage2_1_, policy0_.insured_id as insured_7_1_, policy0_.monthly_amount as monthly_3_1_, policy0_.policy_end_date as policy_e4_1_, policy0_.policy_start_date as policy_s5_1_, policy0_.policy_type as policy_t6_1_ from policies policy0_
+2024-01-11 18:55:54.830 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:55:54.831 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2024-01-11 18:55:54.832 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:55:56.674 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/policies", parameters={}
+2024-01-11 18:55:56.675 DEBUG 42554 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.PolicyController#getAllPolicies()
+2024-01-11 18:55:56.677 DEBUG 42554 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select policy0_.id as id1_1_, policy0_.coverage_amount as coverage2_1_, policy0_.insured_id as insured_7_1_, policy0_.monthly_amount as monthly_3_1_, policy0_.policy_end_date as policy_e4_1_, policy0_.policy_start_date as policy_s5_1_, policy0_.policy_type as policy_t6_1_ from policies policy0_
+2024-01-11 18:55:56.680 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:55:56.680 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2024-01-11 18:55:56.682 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:55:57.124 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 18:55:57.124 DEBUG 42554 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 18:55:57.126 DEBUG 42554 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 18:55:57.131 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:55:57.132 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 18:55:57.134 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:00.027 DEBUG 42554 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 18:56:00.027 DEBUG 42554 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 18:56:00.029 DEBUG 42554 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 18:56:00.033 DEBUG 42554 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:00.034 DEBUG 42554 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 18:56:00.038 DEBUG 42554 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:02.226 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/1", parameters={}
+2024-01-11 18:56:02.227 DEBUG 42554 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 18:56:02.245 DEBUG 42554 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 18:56:02.247 TRACE 42554 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-01-11 18:56:02.256 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:02.257 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01- (truncated)...]
+2024-01-11 18:56:02.259 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:06.328 DEBUG 42554 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 18:56:06.328 DEBUG 42554 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 18:56:06.330 DEBUG 42554 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 18:56:06.335 DEBUG 42554 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:06.336 DEBUG 42554 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 18:56:06.338 DEBUG 42554 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:07.379 DEBUG 42554 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/2", parameters={}
+2024-01-11 18:56:07.380 DEBUG 42554 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 18:56:07.383 DEBUG 42554 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 18:56:07.383 TRACE 42554 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2024-01-11 18:56:07.386 DEBUG 42554 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:07.386 DEBUG 42554 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=2, firstName='Marek', lastName='Šenkyřík', email='petr@gmail.com', dateOfBirth=1988-02-02 (truncated)...]
+2024-01-11 18:56:07.388 DEBUG 42554 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:09.595 DEBUG 42554 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 18:56:09.595 DEBUG 42554 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 18:56:09.597 DEBUG 42554 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 18:56:09.602 DEBUG 42554 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:09.602 DEBUG 42554 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 18:56:09.604 DEBUG 42554 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:11.174 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/5", parameters={}
+2024-01-11 18:56:11.181 DEBUG 42554 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 18:56:11.183 DEBUG 42554 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 18:56:11.183 TRACE 42554 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [5]
+2024-01-11 18:56:11.185 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:11.185 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=5, firstName='pepa', lastName='nový', email='pepa@hsjdjsf.cz', dateOfBirth=1998-08-08, ph (truncated)...]
+2024-01-11 18:56:11.187 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:23.060 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 18:56:23.060 DEBUG 42554 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 18:56:23.062 DEBUG 42554 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 18:56:23.067 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:23.067 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 18:56:23.069 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:28.758 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/1", parameters={}
+2024-01-11 18:56:28.759 DEBUG 42554 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 18:56:28.761 DEBUG 42554 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 18:56:28.761 TRACE 42554 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-01-11 18:56:28.764 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:28.764 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01- (truncated)...]
+2024-01-11 18:56:28.766 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:31.682 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 18:56:31.689 DEBUG 42554 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 18:56:31.691 DEBUG 42554 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 18:56:31.694 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:31.694 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 18:56:31.696 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:56:34.148 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/1", parameters={}
+2024-01-11 18:56:34.148 DEBUG 42554 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 18:56:34.150 DEBUG 42554 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 18:56:34.151 TRACE 42554 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-01-11 18:56:34.153 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:56:34.154 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01- (truncated)...]
+2024-01-11 18:56:34.155 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:57:34.680 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 18:57:34.681 DEBUG 42554 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 18:57:34.683 DEBUG 42554 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 18:57:34.688 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:57:34.689 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 18:57:34.690 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:57:36.110 DEBUG 42554 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/1", parameters={}
+2024-01-11 18:57:36.111 DEBUG 42554 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 18:57:36.112 DEBUG 42554 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 18:57:36.113 TRACE 42554 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-01-11 18:57:36.116 DEBUG 42554 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:57:36.116 DEBUG 42554 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01- (truncated)...]
+2024-01-11 18:57:36.117 DEBUG 42554 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 18:59:50.400 DEBUG 42554 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/1", parameters={}
+2024-01-11 18:59:50.401 DEBUG 42554 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 18:59:50.403 DEBUG 42554 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 18:59:50.403 TRACE 42554 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-01-11 18:59:50.406 DEBUG 42554 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 18:59:50.406 DEBUG 42554 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01- (truncated)...]
+2024-01-11 18:59:50.408 DEBUG 42554 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 19:00:48.828 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/1", parameters={}
+2024-01-11 19:00:48.829 DEBUG 42554 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 19:00:48.830 DEBUG 42554 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 19:00:48.831 TRACE 42554 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-01-11 19:00:48.834 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 19:00:48.835 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01- (truncated)...]
+2024-01-11 19:00:48.836 DEBUG 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 19:01:21.826 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/insured/1", parameters={}
+2024-01-11 19:01:21.829 DEBUG 42554 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getInsuredById(Long)
+2024-01-11 19:01:21.831 DEBUG 42554 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select insured0_.id as id1_0_0_, insured0_.date_of_birth as date_of_2_0_0_, insured0_.email as email3_0_0_, insured0_.first_name as first_na4_0_0_, insured0_.last_name as last_nam5_0_0_, insured0_.marital_status as marital_6_0_0_, insured0_.phone as phone7_0_0_, insured0_.place_of_birth as place_of8_0_0_, insured0_.residence as residenc9_0_0_, insured0_.social_security_number as social_10_0_0_ from insured insured0_ where insured0_.id=?
+2024-01-11 19:01:21.831 TRACE 42554 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2024-01-11 19:01:21.833 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 19:01:21.833 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01- (truncated)...]
+2024-01-11 19:01:21.834 DEBUG 42554 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 19:02:04.160 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/policies/", parameters={}
+2024-01-11 19:02:04.161 DEBUG 42554 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.PolicyController#createPolicy(Policy)
+2024-01-11 19:02:04.162 DEBUG 42554 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 19:02:04.166 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/policies/", parameters={}
+2024-01-11 19:02:04.166 DEBUG 42554 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.PolicyController#createPolicy(Policy)
+2024-01-11 19:02:04.209 DEBUG 42554 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [cz.itnetwork.model.Policy@20b8fed9]
+2024-01-11 19:02:04.230 DEBUG 42554 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into policies (coverage_amount, insured_id, monthly_amount, policy_end_date, policy_start_date, policy_type) values (?, ?, ?, ?, ?, ?)
+2024-01-11 19:02:04.231 TRACE 42554 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [DOUBLE] - [null]
+2024-01-11 19:02:04.231 TRACE 42554 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [null]
+2024-01-11 19:02:04.231 TRACE 42554 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [DOUBLE] - [null]
+2024-01-11 19:02:04.232 TRACE 42554 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [DATE] - [null]
+2024-01-11 19:02:04.232 TRACE 42554 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [DATE] - [null]
+2024-01-11 19:02:04.232 TRACE 42554 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [null]
+2024-01-11 19:02:04.241  WARN 42554 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-01-11 19:02:04.241 ERROR 42554 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'coverage_amount' cannot be null
+2024-01-11 19:02:04.250 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2024-01-11 19:02:04.254 ERROR 42554 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Column 'coverage_amount' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1348) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.25.jar:8.0.25]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3196) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3802) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:99) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:720) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:706) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-5.3.8.jar:5.3.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy88.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311) ~[spring-orm-5.3.8.jar:5.3.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy88.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:597) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:599) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.8.jar:5.3.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy93.save(Unknown Source) ~[na:na]
+	at cz.itnetwork.service.PolicyService.saveOrUpdate(PolicyService.java:42) ~[classes/:na]
+	at cz.itnetwork.controller.PolicyController.createPolicy(PolicyController.java:51) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.48.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.8.jar:5.3.8]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.48.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-01-11 19:02:04.280 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2024-01-11 19:02:04.301 DEBUG 42554 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-01-11 19:02:04.326 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 19:02:04.342 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jan 11 19:02:04 CET 2024, status=500, error=Internal Server Error, path=/api/policies (truncated)...]
+2024-01-11 19:02:04.347 DEBUG 42554 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2024-01-11 19:02:36.006 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/policies", parameters={}
+2024-01-11 19:02:36.006 DEBUG 42554 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.PolicyController#getAllPolicies()
+2024-01-11 19:02:36.008 DEBUG 42554 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select policy0_.id as id1_1_, policy0_.coverage_amount as coverage2_1_, policy0_.insured_id as insured_7_1_, policy0_.monthly_amount as monthly_3_1_, policy0_.policy_end_date as policy_e4_1_, policy0_.policy_start_date as policy_s5_1_, policy0_.policy_type as policy_t6_1_ from policies policy0_
+2024-01-11 19:02:36.010 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 19:02:36.010 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2024-01-11 19:02:36.011 DEBUG 42554 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 19:02:51.679 DEBUG 42554 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/insured", parameters={}
+2024-01-11 19:02:51.679 DEBUG 42554 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.InsuredController#getAllInsured()
+2024-01-11 19:02:51.681 DEBUG 42554 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select insured0_.id as id1_0_, insured0_.date_of_birth as date_of_2_0_, insured0_.email as email3_0_, insured0_.first_name as first_na4_0_, insured0_.last_name as last_nam5_0_, insured0_.marital_status as marital_6_0_, insured0_.phone as phone7_0_, insured0_.place_of_birth as place_of8_0_, insured0_.residence as residenc9_0_, insured0_.social_security_number as social_10_0_ from insured insured0_
+2024-01-11 19:02:51.684 DEBUG 42554 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 19:02:51.685 DEBUG 42554 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Insured{id=1, firstName='Marek', lastName='Šenkyřík', email='dobry@hsjdjsf.cz', dateOfBirth=1991-01 (truncated)...]
+2024-01-11 19:02:51.687 DEBUG 42554 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 19:02:54.073 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/policies", parameters={}
+2024-01-11 19:02:54.073 DEBUG 42554 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cz.itnetwork.controller.PolicyController#getAllPolicies()
+2024-01-11 19:02:54.075 DEBUG 42554 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select policy0_.id as id1_1_, policy0_.coverage_amount as coverage2_1_, policy0_.insured_id as insured_7_1_, policy0_.monthly_amount as monthly_3_1_, policy0_.policy_end_date as policy_e4_1_, policy0_.policy_start_date as policy_s5_1_, policy0_.policy_type as policy_t6_1_ from policies policy0_
+2024-01-11 19:02:54.076 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-01-11 19:02:54.077 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2024-01-11 19:02:54.078 DEBUG 42554 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-01-11 20:23:02.731  INFO 42554 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-11 20:23:02.742  INFO 42554 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-11 20:23:02.746  INFO 42554 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

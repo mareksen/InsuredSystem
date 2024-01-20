@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Insured - Insurance System</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="home.html">Insurance System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="list_of_insured.html">List of Insured</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="list_of_policies.html">List of Insurance Policies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="add_insured.html">Add Insured</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Content for Adding Insured -->
+<div class="container mt-4">
+  <h2>Add Insured</h2>
+  <form id="form-id">
+    <!-- Field for First Name -->
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+    </div>
+
+    <!-- Field for Last Name -->
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+    </div>
+
+    <!-- Field for Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+
+    <!-- Field for Phone -->
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+    </div>
+
+    <!-- Field for Permanent Residence -->
+    <div class="form-group">
+      <label for="residence">Permanent Residence</label>
+      <input type="text" class="form-control" id="residence" placeholder="Enter permanent residence address">
+    </div>
+
+    <!-- Field for Date of Birth -->
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth</label>
+      <input type="date" class="form-control" id="dateOfBirth">
+    </div>
+
+    <!-- Field for Social Security Number -->
+    <div class="form-group">
+      <label for="socialSecurityNumber">Social Security Number</label>
+      <input type="text" class="form-control" id="socialSecurityNumber" placeholder="Enter social security number">
+    </div>
+
+    <!-- Field for Place of Birth -->
+    <div class="form-group">
+      <label for="placeOfBirth">Place of Birth</label>
+      <input type="text" class="form-control" id="placeOfBirth" placeholder="Enter place of birth">
+    </div>
+
+
+    <!-- Field for Marital Status -->
+    <div class="form-group">
+      <label for="maritalStatus">Marital Status</label>
+      <select class="form-control" id="maritalStatus">
+        <option value="">Select status</option>
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+        <option value="divorced">Divorced</option>
+        <option value="widowed">Widowed</option>
+      </select>
+    </div>
+
+    <!-- Button to Submit Form -->
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+
+<!-- Bootstrap Scripts -->
+<script>
+  // Function to handle the submission of the insured form
+  function submitInsuredForm() {
+    // Gathering form data into an object
+    var formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        residence: document.getElementById('residence').value,
+        dateOfBirth: document.getElementById('dateOfBirth').value,
+        socialSecurityNumber: document.getElementById('socialSecurityNumber').value,
+        placeOfBirth: document.getElementById('placeOfBirth').value,
+        maritalStatus: document.getElementById('maritalStatus').value.toUpperCase() // Converts marital status to uppercase
+    };
+    // Logging the formData object to the console
+    console.log(formData);
+
+    // Sending a POST request to the server with the form data
+    fetch('http://localhost:8080/api/insured', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json()) // Parsing the JSON response
+    .then(data => console.log('Success:', data)) // Logging success response
+    .catch((error) => console.error('Error:', error)); // Handling errors
+  }
+
+  // Adding an event listener to the form for the submit event
+  document.getElementById('form-id').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevents the default form submission action
+      submitInsuredForm(); // Calls the function to submit the form data
+  });
+</script>
+
+<!-- External Bootstrap and jQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

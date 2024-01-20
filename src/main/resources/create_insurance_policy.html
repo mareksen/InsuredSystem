@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Insurance Policy</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation bar using Bootstrap for styling -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Brand name linked to the home page -->
+    <a class="navbar-brand" href="home.html">Insurance System</a>
+    <!-- Collapsible menu button for smaller screens -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navigation links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="list_of_insured.html">List of Insured</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="add_insured.html">Add Insured</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="list_of_policies.html">List of Insurance Policies</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main content container -->
+<div class="container mt-4">
+    <h1>Create Insurance Policy for Insured</h1>
+    <!-- Form for creating an insurance policy -->
+    <form id="form-id">
+        <!-- Hidden input to store the insured's ID -->
+        <input type="hidden" id="insuredId" name="insuredId" value="">
+        <!-- Dropdown for selecting the type of policy -->
+        <div class="form-group">
+            <label for="policyType">Type Of Policy</label>
+            <select class="form-control" name="policyType" id="policyType">
+                <option value="property_insurance">Property Insurance</option>
+                <option value="travel_insurance">Travel Insurance</option>
+                <option value="vehicle_insurance">Vehicle Insurance</option>
+                <option value="health_insurance">Health Insurance</option>
+            </select>
+        </div>
+        <!-- Input fields for coverage amount and monthly amount -->
+        <div class="form-group">
+            <label for="coverageAmount">Coverage Amount</label>
+            <input type="number" class="form-control" name="coverageAmount" id="coverageAmount" placeholder="Enter coverage amount">
+        </div>
+        <div class="form-group">
+            <label for="monthlyAmount">Monthly Amount</label>
+            <input type="number" class="form-control" name="monthlyAmount" id="monthlyAmount" placeholder="Enter Monthly Amount">
+        </div>
+        <!-- Date inputs for policy start and end dates -->
+        <div class="form-group">
+            <label for="policyStartDate">Start of Coverage</label>
+            <input type="date" class="form-control" name="policyStartDate" id="policyStartDate" placeholder="Enter start of Coverage">
+        </div>
+        <div class="form-group">
+            <label for="policyEndDate">End of Coverage</label>
+            <input type="date" class="form-control" name="policyEndDate" id="policyEndDate" placeholder="Enter End of Coverage">
+        </div>
+        <!-- Submit button for the form -->
+        <button type="submit" class="btn btn-primary">Create Policy</button>
+    </form>
+</div>
+
+<!-- jQuery, Popper.js, and Bootstrap's JavaScript for additional functionality -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // JavaScript function to handle the submission of the policy form
+    function submitPolicyForm() {
+        // Fetching and formatting date values from the form
+        var startDate = new Date(document.getElementById('policyStartDate').value);
+        var endDate = new Date(document.getElementById('policyEndDate').value);
+        var formattedStartDate = startDate.toLocaleDateString('en-GB').split('/').reverse().join('-'); // Formats date from DD-MM-YYYY to YYYY-MM-DD
+        var formattedEndDate = endDate.toLocaleDateString('en-GB').split('/').reverse().join('-'); // Formats date from DD-MM-YYYY to YYYY-MM-DD
+
+        // Creating a formData object with the formatted dates and other form values
+        var formData = {
+            insured_id: document.getElementById('insuredId').value,
+            coverage_amount: document.getElementById('coverageAmount').value,
+            monthly_amount: document.getElementById('monthlyAmount').value,
+            policy_start_date: formattedStartDate,
+            policy_end_date: formattedEndDate,
+            policy_type: document.getElementById('policyType').value,
+        };
+
+        // Logging formData to the console
+        console.log(formData);
+
+        // Sending a POST request to the server with the form data
+        fetch('http://localhost:8080/api/policies/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json()) // Parsing the JSON response
+        .then(data => console.log('Success:', data)) // Logging success response
+        .catch((error) => console.error('Error:', error)); // Handling and logging errors
+    }
+
+    // Function to load the insured's ID from the URL query parameters
+    function loadInsuredIdFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const insuredId = urlParams.get('insuredId');
+        document.getElementById('insuredId').value = insuredId;
+    }
+
+    // Adding event listeners for window load and form submission
+    window.onload = function() {
+        loadInsuredIdFromUrl(); // Loads the insured's ID when the window is loaded
+        document.getElementById('form-id').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevents the default form submission
+            submitPolicyForm(); // Calls the function to submit the form
+        });
+    };
+</script>
+
+<!-- jQuery, Popper.js, and Bootstrap's JavaScript for additional functionality -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
