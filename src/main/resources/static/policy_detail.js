@@ -1,60 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Policy Detail - Insurance System</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="home.html">Insurance System</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="list_of_insured.html">List of Insured</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="add_insured.html">Add Insured</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="list_of_policies.html">List of Insurance Policies<span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<!-- Page Content for Policy Detail -->
-<div class="container mt-4">
-    <h1>Policy Detail</h1>
-    <div id="policyDetail" class="card">
-        <!-- Detaily pojistky budou vloženy zde -->
-        <div class="card-body">
-            <!-- Dynamicky generovaný obsah -->
-            <div id="policyFields">
-                <!-- Zde se vloží editovatelná pole -->
-            </div>
-            <!-- </div> -->
-            <!-- <div class="card-footer"> -->
-            <!-- <button onclick="history.back()" class="btn btn-secondary">Back to List</button> -->
-            <!-- </div> -->
-        </div>
-        <div class="card-footer">
-            <button id="save-all" class="btn btn-success" onclick="saveAllData()" style="display: none;">Save All
-            </button>
-            <button id="edit-all" class="btn btn-primary" onclick="toggleAllEdit()">Edit All</button>
-            <button id="delete-insured" class="btn btn-danger" onclick="deleteInsured()">Delete policy</button>
-        </div>
-    </div>
-</div>
-
-<script>
     // Creates HTML structure for an editable field
     function createEditableField(fieldId, fieldName, fieldValue) {
         return `
@@ -187,12 +130,8 @@
     // Calls loadPolicyDetail when the page loads
     window.onload = loadPolicyDetail;
 
-</script>
 
-<!-- Bootstrap and jQuery scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+// Bootstrap and jQuery scripts
+src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"

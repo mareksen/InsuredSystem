@@ -7,7 +7,7 @@ import cz.itnetwork.service.InsuredService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,7 +47,7 @@ public class InsuredController {
 
     // Endpoint to add a new insured person
     @PostMapping
-    public ResponseEntity<Insured> createInsured(@RequestBody Insured insured) {
+    public ResponseEntity<Insured> createInsured(@Valid @RequestBody Insured insured) {
         // Saves the new insured person and returns it in the response
         Insured savedInsured = insuredService.saveOrUpdate(insured);
         return ResponseEntity.ok(savedInsured);

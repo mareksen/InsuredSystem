@@ -54,7 +54,7 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <!-- Additional dependencies as needed... -->
+
     </dependencies>
 
     <!-- Configuration of Maven plugins -->

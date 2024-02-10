@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Policies - Insurance System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="list_of_policies.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="home.html">Insurance System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="list_of_insured.html">List of Insured</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="list_of_policies.html">List of Insurance Policies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="add_insured.html">Add Insured</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <h1>List of Insurance Policies</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Coverage Amount</th>
+            <th>Monthly Amount</th>
+            <th>Policy Start Date</th>
+            <th>Policy End Date</th>
+            <th>Policy Type</th>
+            <th>Insured Person</th>
+            <th>Actions</th>
+
+        </tr>
+        </thead>
+        <tbody id="policiesList">
+        <!-- the list of policies will be here -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

@@ -4,7 +4,7 @@ package cz.itnetwork.model;
 
 import javax.persistence.*;
 import java.util.Date;
-import javax.validation.constraints.Email;
+import javax.validation.constraints.*;
 import java.util.Objects;
 
 /**
@@ -22,14 +22,17 @@ public class Insured {
     private Long id;
 
     // First name of the insured person
+    @NotBlank(message = "First name is required")
     @Column(name = "first_name", nullable = false)
     private String firstName;
 
     // Last name of the insured person
+    @NotBlank(message = "Last name is required")
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
     // Email of the insured person
+    @Email(message = "Email should be valid")
     @Column(name = "email")
     private String email;
 
@@ -39,10 +42,12 @@ public class Insured {
     private Date dateOfBirth;
 
     // Phone number of the insured person
+    @Pattern(regexp = "\\+420[0-9]{9}", message = "Phone number should start with +420 followed by 9 digits")
     @Column(name = "phone")
     private String phone;
 
     // Permanent residence address of the insured person
+    @NotBlank(message = "Residence address is required")
     @Column(name = "residence")
     private String residence;
 

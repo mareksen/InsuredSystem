@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Insured - Insurance System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="list_of_insured.css">
+    <script src="list_of_insured.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="home.html">Insurance System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="list_of_insured.html">List of Insured</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="list_of_policies.html">List of Insurance Policies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="add_insured.html">Add Insured</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Content for List of Insured -->
+<div class="container mt-4">
+    <h1>List of Insured</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Permanent Residence</th>
+            <th>Date of Birth</th>
+            <th>Social Security Number</th>
+            <th>Place of Birth</th>
+            <th>Marital Status</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="insuredList">
+        <!-- Items will be inserted dynamically using JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

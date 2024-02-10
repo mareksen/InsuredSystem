@@ -1,0 +1,32 @@
+        /* Style for each editable field container */
+        .editable-field {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 0;
+        }
+
+        /* Style for the span inside editable fields */
+        .editable-field span {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+
+        .edit-mode {
+            display: none;
+        }
+
+        .edit-mode-active .edit-mode {
+            display: inline;
+        }
+
+        .edit-mode-active .view-mode {
+            display: none;
+        }
+
+        /* Style for highlighting elements, typically when they are editable or focused */
+        .highlight {
+        background-color: #e7f4ff; /* soft blue color */
+        transition: background-color 0.3s ease; /* smooth color change animation */
+    }
